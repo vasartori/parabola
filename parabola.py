@@ -14,9 +14,12 @@ def delta(a, b, c):
 
 def raiz_real(a, b, c):
     d = delta(a, b, c)
-    x1 = ((-b + sqrt(d)) / 2 * a)
-    x2 = ((-b - sqrt(d)) / 2 * a)
-    return x1, x2
+    if d < 0:
+        raise Exception('Nao posso trabalhar com numeros imaginarios')
+    else:
+        x1 = ((-b + sqrt(d)) / 2 * a)
+        x2 = ((-b - sqrt(d)) / 2 * a)
+        return x1, x2
 
 
 def printa_parabola(lado):
